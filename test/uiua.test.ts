@@ -23,7 +23,9 @@ describe("markup", async () => {
     const path = Path.parse(filePath);
 
     test(path.name, async () => {
-      const actual = hljs.highlight("uiua", await Bun.file(filePath).text());
+      const actual = hljs.highlight(await Bun.file(filePath).text(), {
+        language: "uiua",
+      });
       const expected = await Bun.file(toExpectedPath(path)).text();
       expect(actual.value.trim()).toBe(expected.trim());
     });

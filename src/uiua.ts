@@ -30,8 +30,14 @@ export default function (hljs: HLJSApi): Language {
     ],
   };
 
+  const CHARACTER: Mode = {
+    scope: "string",
+    match: /@./,
+    relevance: 2,
+  };
+
   return {
     name: "Uiua",
-    contains: [NUMBER, BUILT_IN, COMMENT],
+    contains: [NUMBER, CHARACTER, BUILT_IN, COMMENT],
   };
 }

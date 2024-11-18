@@ -32,12 +32,18 @@ export default function (hljs: HLJSApi): Language {
 
   const CHARACTER: Mode = {
     scope: "string",
-    match: /@./,
     relevance: 2,
+    variants: [
+      { match: /@\\x[a-zA-Z0-9]{2}/ },
+      { match: /@\\u\{[a-zA-Z0-9]+\}/ },
+      { match: /@\\u[a-zA-Z0-9]{4}/ },
+      { match: /@\\[0snrtbfv\\]/ },
+      { match: /@./ },
+    ],
   };
 
   return {
     name: "Uiua",
-    contains: [NUMBER, CHARACTER, BUILT_IN, COMMENT],
+    contains: [CHARACTER, NUMBER, BUILT_IN, COMMENT],
   };
 }

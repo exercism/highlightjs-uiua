@@ -61,8 +61,14 @@ export default function (hljs: HLJSApi): Language {
     ],
   };
 
+  const IDENTIFIER: Mode = {
+    scope: "title.function",
+    match: /[a-zA-Z_]+(__\d+)?/,
+    relevance: 10,
+  };
+
   return {
     name: "Uiua",
-    contains: [STRING, CHARACTER, NUMBER, BUILT_IN, COMMENT],
+    contains: [IDENTIFIER, STRING, CHARACTER, NUMBER, BUILT_IN, COMMENT],
   };
 }

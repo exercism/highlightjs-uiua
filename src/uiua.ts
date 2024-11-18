@@ -10,19 +10,21 @@ Website: https://www.uiua.org/
 import { type HLJSApi, type Language, type Mode } from "highlight.js";
 
 export default function (hljs: HLJSApi): Language {
-  const regex = hljs.regex;
+  const BUILT_IN: Mode = {
+    scope: "built_in",
+    match:
+      /[◠⌵+⌝’⍤∠˜◡⋯∩□⊓⊸⍩⌈⑄⊛ℂ◇⊟◴∂♭⊙÷⍢↘.∵=⍖⬚⌕⊢¤:⌊∧⊃⋅≥>⊕∘⊗∫⍚⊂▽⊣⧻≤<ₙ⦷≍↥∊∈↧◿×¯¬≠⌅⤚⟜⤸⋕⊜⊡◌ⁿ⚂⇡/⍥☇↯⇌⍏↻⁅≡\\⊏△±∿⍆√?-⨬⊞↙⸮⍉◹⍣⧅°⍜◰⊚◫⤙]/,
+    relevance: 1,
+  };
 
-  // TODO: get keywords
-  const KEYWORDS: string[] = [];
-
-  const COMMENT = hljs.HASH_COMMENT_MODE;
+  const COMMENT: Mode = hljs.HASH_COMMENT_MODE;
 
   const NUMBER: Mode = {
     scope: "number",
     relevance: 0,
     variants: [
       { begin: /¯?\d+[eE][-+]?\d+/ }, // exponent notation
-      { begin: /¯?\d+\/\d+/ }, // fraction
+      { begin: /¯?\d+\/¯?\d+/ }, // fraction
       { begin: /¯?\d+(\.\d+)?/ }, // decimal,
       { begin: /[ηπτ∞]/ }, // special numbers
     ],
@@ -30,7 +32,6 @@ export default function (hljs: HLJSApi): Language {
 
   return {
     name: "Uiua",
-    keywords: KEYWORDS,
-    contains: [COMMENT, NUMBER],
+    contains: [NUMBER, BUILT_IN, COMMENT],
   };
 }

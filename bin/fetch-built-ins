@@ -1,4 +1,4 @@
 #!/usr/bin/env sh
 
 curl -L https://www.uiua.org/primitives.json | \
-    jq '[. | to_entries[] | [.key, .value.glyph]] | flatten | del(..|nulls) | sort'
+    jq '. | .glyph]] | flatten | del(..|nulls) | sort'

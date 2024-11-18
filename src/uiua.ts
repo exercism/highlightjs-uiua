@@ -42,8 +42,27 @@ export default function (hljs: HLJSApi): Language {
     ],
   };
 
+  const PLACEHOLDER: Mode = {
+    scope: "subst",
+    match: "_",
+  };
+
+  const STRING: Mode = {
+    scope: "string",
+    variants: [
+      { begin: /^\$\$ /, end: /$/, contains: [PLACEHOLDER] },
+      { begin: /^\$ /, end: /$/ },
+      {
+        begin: /\$"/,
+        end: /"/,
+        contains: [hljs.BACKSLASH_ESCAPE, PLACEHOLDER],
+      },
+      { begin: /"/, end: /"/, contains: [hljs.BACKSLASH_ESCAPE] },
+    ],
+  };
+
   return {
     name: "Uiua",
-    contains: [CHARACTER, NUMBER, BUILT_IN, COMMENT],
+    contains: [STRING, CHARACTER, NUMBER, BUILT_IN, COMMENT],
   };
 }

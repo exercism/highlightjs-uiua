@@ -1,15 +1,19 @@
 # highlightjs-uiua
 
-To install dependencies:
+This repository contains a highlightjs plugin for the [Uiua language](https://www.uiua.org/).
+
+## Local development
+
+First, install the dependencies:
 
 ```bash
 bun install
 ```
 
-To run:
+Then run:
 
 ```bash
-bun run index.ts
+bun dev
 ```
 
-This project was created using `bun init` in bun v1.1.12. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+This will start a [Vite dev server](https://vite.dev/) that contains some Uiua code and some highlighted text.

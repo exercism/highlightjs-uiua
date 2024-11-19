@@ -17,8 +17,3 @@ bun dev
 ```
 
 This will start a [Vite dev server](https://vite.dev/) that contains some Uiua code and some highlighted text.
-
-## TODOs
-
-1. Publish on NPM
-1. Integrate on Exercism

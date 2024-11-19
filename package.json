@@ -9,7 +9,8 @@
     "name": "Erik Schierboom"
   },
   "scripts": {
-    "compile": "bun build --minify src/uiua.ts --outdir dist && bun run declaration",
+    "publish": "bun run compile && bun run declaration && npm publish --access public",
+    "compile": "bun build --minify src/uiua.ts --outdir dist",
     "declaration": "tsc --declaration --emitDeclarationOnly --outDir dist src/uiua.ts",
     "test": "bun test",
     "dev": "vite"

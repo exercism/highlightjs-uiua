@@ -77,9 +77,15 @@ export default function (hljs: HLJSApi): Language {
     match: /[()]/,
   };
 
+  const SIGNATURE: Mode = {
+    scope: "meta",
+    match: /\|\d+(\.\d+)?/,
+  };
+
   return {
     name: "Uiua",
     contains: [
+      SIGNATURE,
       INLINE_FUNCTION,
       ARRAY,
       IDENTIFIER,

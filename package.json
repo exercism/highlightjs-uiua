@@ -1,10 +1,10 @@
 {
   "name": "@exercism/highlightjs-uiua",
   "module": "src/uiua.ts",
-  "main": "dist/uiua.js",
-  "types": "dist/uiua.d.ts",
+  "main": "src/uiua.js",
+  "types": "src/uiua.d.ts",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": {
     "name": "Erik Schierboom"
   },

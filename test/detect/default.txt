@@ -6,6 +6,7 @@
 
 # Arrays
 [] [1 2 3] 1_2_3 [1_2 3_4]
+{} {1 {2 3}}
 
 # Strings
 "Hello, world!"

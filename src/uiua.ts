@@ -74,7 +74,7 @@ export default function (hljs: HLJSApi): Language {
 
   const INLINE_FUNCTION: Mode = {
     scope: "punctuation",
-    match: /[()]/,
+    match: /[(){}]/,
   };
 
   const SIGNATURE: Mode = {

@@ -62,13 +62,32 @@ export default function (hljs: HLJSApi): Language {
   };
 
   const IDENTIFIER: Mode = {
-    scope: "title.function",
-    match: /[a-zA-Z_]+(__\d+)?/,
+    scope: "title.function.invoke",
+    match: /\b[a-zA-Z]+(__\d+)?/,
     relevance: 10,
+  };
+
+  const ARRAY: Mode = {
+    scope: "punctuation",
+    match: /[\[\]_]/,
+  };
+
+  const INLINE_FUNCTION: Mode = {
+    scope: "punctuation",
+    match: /[()]/,
   };
 
   return {
     name: "Uiua",
-    contains: [IDENTIFIER, STRING, CHARACTER, NUMBER, BUILT_IN, COMMENT],
+    contains: [
+      INLINE_FUNCTION,
+      ARRAY,
+      IDENTIFIER,
+      STRING,
+      CHARACTER,
+      NUMBER,
+      BUILT_IN,
+      COMMENT,
+    ],
   };
 }

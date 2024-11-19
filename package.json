@@ -4,13 +4,12 @@
   "main": "src/uiua.js",
   "types": "src/uiua.d.ts",
   "type": "module",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": {
     "name": "Erik Schierboom"
   },
   "scripts": {
-    "publish": "bun run compile && npm publish --access public",
-    "compile": "bun build --minify src/uiua.ts --outdir src",
+    "prepublishOnly": "bun build --minify src/uiua.ts --outdir src",
     "test": "bun test",
     "dev": "vite"
   },

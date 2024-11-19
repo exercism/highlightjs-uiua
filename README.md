@@ -15,7 +15,7 @@ npm install @exercism/highlightjs-uiua
 To publish the package, run:
 
 ```shell
-bun run publish
+bun publish
 ```
 
 ## Local development

@@ -1,11 +1,6 @@
-/.git/
-/.github/
-/bin/
-node_modules/
-test/
-/.gitignore
-/.npmignore
-/bun.lockb
-/CODE_OF_CONDUCT.md
-/index.html
-/tsconfig.json
+*
+!/dist/*
+!/src/*
+!/package.json
+!/LICENSE
+!/README.md

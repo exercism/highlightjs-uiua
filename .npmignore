@@ -1,5 +1,6 @@
-*
-!/src/*
-!/package.json
-!/LICENSE
-!/README.md
+/.github/
+/bin/
+/CODE_OF_CONDUCT.md
+/index.html
+/test/
+/tsconfig.json

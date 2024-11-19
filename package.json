@@ -4,7 +4,7 @@
   "main": "src/uiua.js",
   "types": "src/uiua.d.ts",
   "type": "module",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "author": {
     "name": "Erik Schierboom"
   },

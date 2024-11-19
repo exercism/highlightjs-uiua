@@ -1,18 +1,34 @@
-# highlightjs-uiua
+# highlightjs-uiua middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/exercism/highlightjs-uiua/blob/main/LICENSE) [![npm version](https://img.shields.io/npm/v/@exercism/highlightjs-uiua.svg?style=flat)](https://www.npmjs.com/package/@exercism/highlightjs-uiua)
 
 This repository contains a highlightjs plugin for the [Uiua language](https://www.uiua.org/).
+
+## Installation
+
+To install the package, run:
+
+```shell
+npm install @exercism/highlightjs-uiua
+```
+
+## Publish on NPM
+
+To publish the package, run:
+
+```shell
+bun run publish
+```
 
 ## Local development
 
 First, install the dependencies:
 
-```bash
+```shell
 bun install
 ```
 
 Then run:
 
-```bash
+```shell
 bun dev
 ```
 

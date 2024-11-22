@@ -6,7 +6,8 @@
   "type": "module",
   "version": "0.0.4",
   "author": {
-    "name": "Erik Schierboom"
+    "name": "Erik Schierboom",
+    "email": "erik_schierboom@hotmail.com"
   },
   "scripts": {
     "prepare": "bun build --minify src/uiua.ts --outdir src",

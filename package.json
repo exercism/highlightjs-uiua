@@ -1,14 +1,14 @@
 {
   "name": "@exercism/highlightjs-uiua",
-  "module": "src/uiua.ts",
-  "main": "src/uiua.js",
-  "types": "src/uiua.d.ts",
-  "type": "module",
   "version": "0.0.4",
   "author": {
     "name": "Erik Schierboom",
     "email": "erik_schierboom@hotmail.com"
   },
+  "type": "module",
+  "module": "src/uiua.ts",
+  "main": "src/uiua.js",
+  "types": "src/uiua.d.ts",
   "scripts": {
     "prepare": "bun build --minify src/uiua.ts --outdir src",
     "test": "bun test",

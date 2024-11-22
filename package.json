@@ -9,7 +9,7 @@
     "name": "Erik Schierboom"
   },
   "scripts": {
-    "prepublishOnly": "bun build --minify src/uiua.ts --outdir src",
+    "prepare": "bun build --minify src/uiua.ts --outdir src",
     "test": "bun test",
     "dev": "vite"
   },

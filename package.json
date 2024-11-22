@@ -1,19 +1,20 @@
 {
   "name": "@exercism/highlightjs-uiua",
   "version": "0.0.4",
+  "description": "Uiua language support for Highlight.js",
   "author": {
     "name": "Erik Schierboom",
     "email": "erik_schierboom@hotmail.com"
   },
-  "type": "module",
-  "module": "src/uiua.ts",
-  "main": "src/uiua.js",
-  "types": "src/uiua.d.ts",
   "scripts": {
     "prepare": "bun build --minify src/uiua.ts --outdir src",
     "test": "bun test",
     "dev": "vite"
   },
+  "type": "module",
+  "module": "src/uiua.ts",
+  "main": "src/uiua.js",
+  "types": "src/uiua.d.ts",
   "devDependencies": {
     "@types/bun": "latest",
     "@types/highlight.js": "^10.1.0",
